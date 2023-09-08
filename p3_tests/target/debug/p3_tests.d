@@ -1,0 +1,1 @@
+C:\Users\27476\Desktop\Rust\RustLesson\p3_tests\target\debug\p3_tests.exe: C:\Users\27476\Desktop\Rust\RustLesson\p3_tests\src\main.rs C:\Users\27476\Desktop\Rust\RustLesson\p3_tests\src\t1_macro.rs C:\Users\27476\Desktop\Rust\RustLesson\p3_tests\src\t2_myrc.rs C:\Users\27476\Desktop\Rust\RustLesson\p3_tests\src\t3_lifo.rs
