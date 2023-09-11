@@ -1,0 +1,9 @@
+C:\Users\27476\Desktop\Rust\RustLesson\p4_async\target\debug\deps\concurrent_queue-1088a8770039ad8e.rmeta: C:\Users\27476\.cargo\registry\src\index.crates.io-6f17d22bba15001f\concurrent-queue-2.2.0\src\lib.rs C:\Users\27476\.cargo\registry\src\index.crates.io-6f17d22bba15001f\concurrent-queue-2.2.0\src\bounded.rs C:\Users\27476\.cargo\registry\src\index.crates.io-6f17d22bba15001f\concurrent-queue-2.2.0\src\single.rs C:\Users\27476\.cargo\registry\src\index.crates.io-6f17d22bba15001f\concurrent-queue-2.2.0\src\unbounded.rs C:\Users\27476\.cargo\registry\src\index.crates.io-6f17d22bba15001f\concurrent-queue-2.2.0\src\sync.rs
+
+C:\Users\27476\Desktop\Rust\RustLesson\p4_async\target\debug\deps\concurrent_queue-1088a8770039ad8e.d: C:\Users\27476\.cargo\registry\src\index.crates.io-6f17d22bba15001f\concurrent-queue-2.2.0\src\lib.rs C:\Users\27476\.cargo\registry\src\index.crates.io-6f17d22bba15001f\concurrent-queue-2.2.0\src\bounded.rs C:\Users\27476\.cargo\registry\src\index.crates.io-6f17d22bba15001f\concurrent-queue-2.2.0\src\single.rs C:\Users\27476\.cargo\registry\src\index.crates.io-6f17d22bba15001f\concurrent-queue-2.2.0\src\unbounded.rs C:\Users\27476\.cargo\registry\src\index.crates.io-6f17d22bba15001f\concurrent-queue-2.2.0\src\sync.rs
+
+C:\Users\27476\.cargo\registry\src\index.crates.io-6f17d22bba15001f\concurrent-queue-2.2.0\src\lib.rs:
+C:\Users\27476\.cargo\registry\src\index.crates.io-6f17d22bba15001f\concurrent-queue-2.2.0\src\bounded.rs:
+C:\Users\27476\.cargo\registry\src\index.crates.io-6f17d22bba15001f\concurrent-queue-2.2.0\src\single.rs:
+C:\Users\27476\.cargo\registry\src\index.crates.io-6f17d22bba15001f\concurrent-queue-2.2.0\src\unbounded.rs:
+C:\Users\27476\.cargo\registry\src\index.crates.io-6f17d22bba15001f\concurrent-queue-2.2.0\src\sync.rs:

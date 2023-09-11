@@ -1,6 +1,6 @@
 use std::ops::Deref;
 
-pub struct MyRcRef<T> {
+struct MyRcRef<T> {
     obj: T,
     cnt: i32,
 }
@@ -75,4 +75,6 @@ pub fn main() {
     println!("five1 = {}", five1);
     println!("five2 = {}", five2);
     println!("strong_cnt of *five* = {}", MyRc::strong_count(&five1));
+    drop(five1);
+    println!("strong_cnt of *five* = {}", MyRc::strong_count(&five2));
 }
