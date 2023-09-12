@@ -7,5 +7,5 @@ fn main() {
     t1_macro::main();
     t2_myrc::main();
     t3_lifo::main();
-    
+    t2_myrc_another::main();
 }

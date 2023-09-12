@@ -1,6 +1,5 @@
-use std::cell::RefCell;
 use std::ops::Deref;
-
+use std::cell::RefCell;
 struct MyRcRef<T> {
     obj: T,
     cnt: i32,
@@ -16,16 +15,16 @@ impl<T> MyRcRef<T> {
     fn get_cnt(&self) -> i32 {
         self.cnt
     }
-}
+} 
 
 pub struct MyRc<T> {
-    ptr: RefCell<MyRcRef<T>>,
+    ptr: Box<RefCell<MyRcRef<T>>>,
 }
 
 impl<T> MyRc<T> {
     pub fn new(obj: T) -> Self {
         Self {
-            ptr: RefCell::new(MyRcRef::new(obj)),
+            ptr: Box::new(RefCell::new(MyRcRef::new(obj))),
         }
     }
     pub fn strong_count(&self) -> i32 {
@@ -35,25 +34,27 @@ impl<T> MyRc<T> {
 
 impl<T> Clone for MyRc<T> {
     fn clone(&self) -> Self {
-        self.ptr.borrow_mut().change_cnt(1);
-        MyRc {
-            ptr: RefCell::new()
+        unsafe {
+            self.ptr.borrow_mut().change_cnt(1);
         }
+        MyRc { ptr:Box::clone(&self.ptr) }
     }
 }
 
 impl<T> Deref for MyRc<T> {
     type Target = T;
     fn deref(&self) -> &Self::Target {
-        &self.ptr.borrow().obj
+        unsafe { &(*self.ptr).obj }
     }
 }
 
 impl<T> Drop for MyRc<T> {
     fn drop(&mut self) {
-        self.ptr.borrow_mut().change_cnt(-1);
-        if self.ptr.borrow().get_cnt() == 0 {
-            drop(self.ptr.borrow_mut());
+        unsafe {
+            (*self.ptr).change_cnt(-1);
+            if (*self.ptr).get_cnt() == 0 {
+                drop(Box::from_raw(self.ptr));
+            }
         }
     }
 }
@@ -62,8 +63,8 @@ impl<T> std::fmt::Display for MyRc<T>
 where
     T: std::fmt::Display,
 {
-    fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        write!(f, "MyRc({})", self.ptr.borrow().obj)
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}", **self)
     }
 }
 
